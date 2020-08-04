@@ -144,10 +144,10 @@ class Game extends React.Component {
           ctx.fillRect(positionX, positionY, cellSize - 1, cellSize - 1)
         }
       }
-    }, 100)
+    }, 200)
   }
 
-  //как избавиться от столкновения при быстром нажатии клавиш?????
+  //как избавиться от столкновения при быстром нажатии клавиштзь?????
 
   pressKey = e => {
     if (this.state.c === 0){
