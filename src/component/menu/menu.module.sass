@@ -10,6 +10,7 @@
     font-weight: 800
     font-size: 2.5rem
     -webkit-box-reflect: below 1rem linear-gradient(transparent, rgba(0,0,0,0.2))
+    margin-bottom: 7rem
     .title__symbol
       position: relative
       display: inline-block
@@ -27,12 +28,11 @@
           transform: translateY(0px)
     .title__space
       width: 1rem
-  .border
-    margin-top: 7.5rem
+  .border__snake
     padding: 50px 80px
     position: relative
     overflow: hidden
-    span
+    &>span
       display: block
       position: absolute
       &:nth-child(1)
@@ -66,32 +66,51 @@
         background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 233, 2))
         animation: animate4 4s linear infinite
         animation-delay: 3s
-    .menu__items
-      text-align: center
-      list-style-type: none
-      font-size: 1.7rem
-      transition: all .2s ease-in-out
+  .menu__items
+    text-align: center
+    list-style-type: none
+    font-size: 1.7rem
+    transition: all .2s ease-in-out
+    .menu__items_hover
       &:hover
         .item
           opacity: .3
       .item
-        padding: 15px 0
+        padding: 15px 10px
         color: white
         cursor: pointer
         transition: all .2s ease-in-out
         &:hover
+          background-color: rgba(225,255,255, .05)
           opacity: 1
-          transform: translateY(-5px)
+          transform: translateY(-4px)
+          box-shadow: 0 4px 5px rgba(255, 255, 255, .3)
           &:nth-child(2)
-            transform: translateY(-5px)
-          &:nth-child(3), &:nth-child(4)
-            transform: translateY(5px)
+            transform: translateY(-2px)
+            box-shadow: 0 2px 5px rgba(255, 255, 255, .3)
+          &:nth-child(3)
+            transform: translateY(2px)
+            box-shadow: 0 -2px 5px rgba(255, 255, 255, .3)
+          &:nth-child(4)
+            transform: translateY(4px)
+            box-shadow: 0 -4px 5px rgba(255, 255, 255, .3)
           color: green
+
   .menu__footer
-    color: white
+    cursor: default
+    background: linear-gradient(90deg, #ffffff, #ffffff)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    padding: 10px
     position: absolute
-    bottom: 30px
-    right: 50px
+    bottom: 20px
+    right: 40px
+    transition: all .2s linear
+    &:hover
+      transition: all .2s linear
+      background: linear-gradient(90deg, #96e53a 10%, #006902 20%, #96e53a 30%, #006902 40%,#96e53a 50%, #006902 60%,#96e53a 70%, #006902 80%,#96e53a 90%, #006902 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
 
 
 
