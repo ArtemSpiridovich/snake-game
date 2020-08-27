@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Field from './component/feild'
 import Game from './component/game'
+import {Menu} from "./component/menu/menu";
+import './index.sass'
 
 function App () {
   const [cellSize, setCellSize] = useState(16)
@@ -739,21 +741,21 @@ function App () {
 
   return (
     <div class='app'>
-      {/* <Menu /> */}
-      <Field
-        cellSize={cellSize}
-        state={state}
-        setState={setState}
-        setCellSize={setCellSize}
-      />
-      <Game
-        cellSize={cellSize}
-        snake={snake}
-        apple={apple}
-        setApple={setApple}
-        setSnake={setSnake}
-        setCellSize={setCellSize}
-      />
+       <Menu />
+      {/*<Field*/}
+      {/*  cellSize={cellSize}*/}
+      {/*  state={state}*/}
+      {/*  setState={setState}*/}
+      {/*  setCellSize={setCellSize}*/}
+      {/*/>*/}
+      {/*<Game*/}
+      {/*  cellSize={cellSize}*/}
+      {/*  snake={snake}*/}
+      {/*  apple={apple}*/}
+      {/*  setApple={setApple}*/}
+      {/*  setSnake={setSnake}*/}
+      {/*  setCellSize={setCellSize}*/}
+      {/*/>*/}
     </div>
   )
 }

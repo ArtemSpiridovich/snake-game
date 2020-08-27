@@ -109,7 +109,15 @@ class Game extends React.Component {
         ctx.clearRect(this.props.apple[0], this.props.apple[1], cellSize, cellSize);
         let appleX = this.createApple(0, 23 * cellSize)
         let appleY = this.createApple(0, 23 * cellSize)
-        this.props.setApple([appleX, appleY])
+        snakeCopy.map(el => {
+          if(appleX === el[0] && appleY === el[1]) {
+            let appleX = this.createApple(0, 23 * cellSize)
+            let appleY = this.createApple(0, 23 * cellSize)
+            this.props.setApple([appleX, appleY])
+          } else {
+            this.props.setApple([appleX, appleY])
+          }
+        })
         ctx.fillStyle = 'Red'
         ctx.beginPath()
         ctx.arc(
@@ -172,10 +180,6 @@ class Game extends React.Component {
         c: 1
       })
     } }
-    // else if (e.keyCode === 0) {
-    //   let game = this.refs.game
-    //   game.focus()
-    // }
   }
 
   render (props) {
